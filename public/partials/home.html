@@ -1,0 +1,81 @@
+<!-- Table -->
+
+
+<div class="container">
+
+  <div class="jumbotron">
+    <h2>Welcome to Linked in DB</h2>
+  </div>
+
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading text-center">
+      <h4>Linked in Table</h4>
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr class="text-center">
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Connect </td>
+        </tr>
+      </thead>
+
+      <tbody ng-repeat="user in users track by $index" class="text-center">
+        <tr>
+          <td>{{user.ACCOUNT_FIRST_NAME}}
+          </td>
+
+
+          <td>{{user.ACCOUNT_LAST_NAME}}</td>
+
+          <td><button class="btn btn-primary">Connect with me</button></td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+
+
+
+  </div>
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading text-center">
+      <h4>Add Yourself Here</h4>
+    </div>
+
+    <!-- Table -->
+    <table class="table">
+
+      <thead>
+        <tr class="text-center">
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Link </td>
+          <td>Action </td>
+        </tr>
+      </thead>
+
+      <tbody  class="text-center">
+        <tr>
+          <td><input class="form-control" placeholder="First name" ng-model="newUser.first_name">
+          </td>
+
+
+          <td><input class="form-control"  placeholder="Last name" ng-model="newUser.last_name"></td>
+          <td><input class="form-control" placeholder="paste your link here" ng-model="newUser.link"></td>
+
+          <td><button class="btn btn-primary" ng-click="addNewUser()">Add</button></td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+  </div>
+
+  
+</div>
