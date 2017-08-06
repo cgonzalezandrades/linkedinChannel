@@ -19,7 +19,7 @@ connection.connect(function (err) {
     return;
   };
 
-  console.log('connected as id ' + connection.threadId);
+//  console.log('connected as id ' + connection.threadId);
 
 });
 
@@ -56,8 +56,7 @@ app.get('/accountList', function (req, res) {
 
 
 app.post('/addAccount', function (req, res) {
-  console.log('this is the body')
-  console.log(req.body)
+//  console.log(req.body)
 
   connection.query('INSERT INTO LINKEDIN_ACCOUNTS (ACCOUNT_FIRST_NAME, ACCOUNT_LAST_NAME, ACCOUNT_LINK) VALUES(?,?,?)', [req.body.ACCOUNT_FIRST_NAME, req.body.ACCOUNT_LAST_NAME, req.body.ACCOUNT_LINK], function (error, results, field) {
     if (error) throw error;
@@ -71,6 +70,6 @@ app.post('/addAccount', function (req, res) {
 
 var PORT = process.env.PORT || 3000;
 app.listen(PORT, function () {
-  console.log('IM LISTENING IS PORT ' + PORT);
+//  console.log('IM LISTENING IS PORT ' + PORT);
 
 })
