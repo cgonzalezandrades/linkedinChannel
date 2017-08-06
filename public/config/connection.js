@@ -16,7 +16,7 @@ if (process.env.JAWSDB_URL) {
     host: 'localhost',
     user: 'kh25u3iu1dz254qk',
     password: 'a26s5k6hjtq66m4p',
-    database: 'LINKEDIN'
+    database: 'r44ezfddc6fcbn66'
   });
 
 }
