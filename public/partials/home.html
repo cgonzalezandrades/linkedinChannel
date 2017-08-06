@@ -4,13 +4,51 @@
 <div class="container">
 
   <div class="jumbotron">
-    <h2>Welcome to Linked in DB</h2>
+    <h2>Welcome to LinkedIn DB</h2>
   </div>
+  
+  
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading text-center">
+      <h4>Add Yourself Here</h4>
+    </div>
+
+    <!-- Table -->
+    <table class="table">
+
+      <thead>
+        <tr class="text-center">
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Link </td>
+          <td>Action </td>
+        </tr>
+      </thead>
+
+      <tbody  class="text-center">
+        <tr>
+          <td><input class="form-control" ng-change="formFilled()" placeholder="First name" ng-model="newUser.firstName">
+          </td>
+
+
+          <td><input class="form-control" ng-change="formFilled()" placeholder="Last name" ng-model="newUser.lastName"></td>
+          <td><input class="form-control" ng-change="formFilled()" placeholder="paste your link here" ng-model="newUser.link"></td>
+
+          <td><button class="btn btn-primary" ng-disabled="userIn" ng-click="addNewUser()">Add</button></td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+  </div>
+  
 
   <div class="panel panel-default">
     <!-- Default panel contents -->
     <div class="panel-heading text-center">
-      <h4>Linked in Table</h4>
+      <h4>LinkedIn Table</h4>
     </div>
     <table class="table table-hover">
       <thead>
@@ -41,41 +79,7 @@
 
 
   </div>
-  <div class="panel panel-default">
-    <!-- Default panel contents -->
-    <div class="panel-heading text-center">
-      <h4>Add Yourself Here</h4>
-    </div>
-
-    <!-- Table -->
-    <table class="table">
-
-      <thead>
-        <tr class="text-center">
-          <td>First Name</td>
-          <td>Last Name</td>
-          <td>Link </td>
-          <td>Action </td>
-        </tr>
-      </thead>
-
-      <tbody  class="text-center">
-        <tr>
-          <td><input class="form-control" placeholder="First name" ng-model="newUser.first_name">
-          </td>
-
-
-          <td><input class="form-control"  placeholder="Last name" ng-model="newUser.last_name"></td>
-          <td><input class="form-control" placeholder="paste your link here" ng-model="newUser.link"></td>
-
-          <td><button class="btn btn-primary" ng-click="addNewUser()">Add</button></td>
-
-        </tr>
-
-      </tbody>
-
-    </table>
-  </div>
+  
 
   
 </div>

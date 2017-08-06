@@ -3,6 +3,7 @@ myApp.controller('HomeController', ['$scope',  '$rootScope', '$state', '$statePa
 
       console.log('ins home controller')
       $scope.newUser={};
+      $scope.userIn = true;
       
       $http.get('/accountList').then(function success(response) {
         console.log(response.data)
@@ -14,13 +15,27 @@ myApp.controller('HomeController', ['$scope',  '$rootScope', '$state', '$statePa
       
 //  $scope.users = {something:'ss', another:'sds'}
       
+      $scope.formFilled = function(){
+        
+        console.log($scope.newUser)
+        
+        if($scope.newUser.firstName.length > 0 && $scope.newUser.lastName.length > 0 && $scope.newUser.link.length > 0){
+            $scope.userIn = false;
+        console.log('sd')
+        }else{
+          $scope.userIn = true;
+        }
+        
+      
+      }
+      
       $scope.addNewUser = function(){
         
         console.log($scope.newUser)
         
          $scope.users.push({
-           ACCOUNT_FIRST_NAME:$scope.newUser.first_name,
-           ACCOUNT_LAST_NAME:$scope.newUser.last_name,
+           ACCOUNT_FIRST_NAME:$scope.newUser.firstName,
+           ACCOUNT_LAST_NAME:$scope.newUser.lastName,
            ACCOUNT_LINK:$scope.newUser.link
          })
       }
