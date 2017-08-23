@@ -8,7 +8,7 @@ myApp.controller('HomeController', ['$scope', '$rootScope', '$state', '$statePar
 
     $scope.getAccounts = function () {
       $http.get('/accountList').then(function success(response) {
-        //        console.log(response.data)
+        console.log(response.data)
         $scope.users = response.data;
 
         for (var i = 0; i < $scope.users.length; i++) {
